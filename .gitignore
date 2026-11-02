@@ -1,7 +1,5 @@
 /MajiroTool.Cli.v1.0.26.1156
 /scenario
-レコンキスタ___.exe
-Реконкиста.exe
 voice.arc
 UnInst.exe
 stream.arc
@@ -18,3 +16,5 @@ fastdata.arc
 project.json
 readme.txt
 scenario.arc.bak
+/Backup
+レコンキスタ.exe
