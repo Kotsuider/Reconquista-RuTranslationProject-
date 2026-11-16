@@ -1,15 +1,15 @@
 #!/usr/bin/env python3
 """
-mjres_tool.py — extractor and inserter for .mjres <-> .xlsx
+mjres_tool.py — extractor and inserter for .mjres, Markdown and .xlsx
 
 Usage:
   python mjres_tool.py extract file1.mjres [file2.mjres ...] -o output.xlsx
-  python mjres_tool.py insert  input.xlsx  [-o outdir]
+  python mjres_tool.py insert  Reqonquista  [-o outdir]
 
 Xlsx columns: L | OrigName | Orig | NameTL | TL | TLE | Notes
   - Each .mjres file → one sheet (named after the file without extension)
   - Multiline CSV values (real newlines) are stored as \\n in the cell
-  - On insert: TLE is used if non-empty, otherwise TL; if both empty — row skipped
+  - On insert: TLE is used if non-empty, otherwise TL; if both empty — Orig is used
 """
 
 import sys
@@ -18,23 +18,9 @@ import csv
 import io
 import re
 import argparse
+import glob
 
-import openpyxl
-from openpyxl.styles import Font, PatternFill, Alignment, Border, Side
-from openpyxl.utils import get_column_letter
-
-# ---------------------------------------------------------------------------
-# Styling constants
-# ---------------------------------------------------------------------------
 HEADERS = ["L", "OrigName", "Orig", "NameTL", "TL", "TLE", "Notes"]
-
-HEADER_FILL = PatternFill("solid", fgColor="2F5496")
-HEADER_FONT = Font(name="Arial", bold=True, color="FFFFFF", size=10)
-CELL_FONT   = Font(name="Arial", size=10)
-WRAP        = Alignment(wrap_text=True, vertical="top")
-THIN        = Side(style="thin", color="CCCCCC")
-BORDER      = Border(left=THIN, right=THIN, top=THIN, bottom=THIN)
-COL_WIDTHS  = [8, 18, 45, 18, 45, 45, 25]
 
 # ---------------------------------------------------------------------------
 # .mjres parser
@@ -70,9 +56,10 @@ def split_name(value: str) -> tuple[str, str]:
     Returns (name, full_value).  name is empty string if no 「 found.
     """
     idx = value.find("「")
-    if idx == -1:
+    prefix = value[:idx]
+    if idx <= 0 or any(mark in prefix for mark in "\n\r、。"):
         return "", value
-    return value[:idx], value
+    return prefix, value
 
 
 # ---------------------------------------------------------------------------
@@ -97,6 +84,18 @@ def expand_inputs(inputs: list[str]) -> list[str]:
 
 
 def cmd_extract(files: list[str], output: str):
+    import openpyxl
+    from openpyxl.styles import Font, PatternFill, Alignment, Border, Side
+    from openpyxl.utils import get_column_letter
+
+    HEADER_FILL = PatternFill("solid", fgColor="2F5496")
+    HEADER_FONT = Font(name="Arial", bold=True, color="FFFFFF", size=10)
+    CELL_FONT   = Font(name="Arial", size=10)
+    WRAP        = Alignment(wrap_text=True, vertical="top")
+    THIN        = Side(style="thin", color="CCCCCC")
+    BORDER      = Border(left=THIN, right=THIN, top=THIN, bottom=THIN)
+    COL_WIDTHS  = [8, 18, 45, 18, 45, 45, 25]
+
     files = expand_inputs(files)
     wb = openpyxl.Workbook()
     wb.remove(wb.active)  # drop the default empty sheet
@@ -161,18 +160,44 @@ def cmd_extract(files: list[str], output: str):
 # ---------------------------------------------------------------------------
 # INSERT: .xlsx → .mjres files
 # ---------------------------------------------------------------------------
-def cmd_insert(input_xlsx: str, outdir: str):
-    if not os.path.isfile(input_xlsx):
-        sys.exit(f"File not found: {input_xlsx}")
+def read_markdown(path):
+    rows = []
+    seen = set()
+    with open(path, encoding="utf-8-sig") as source:
+        for number, line in enumerate(source, 1):
+            if not re.match(r"^\| L\d+ \|", line):
+                continue
+            cells = re.split(r"(?<!\\)\|", line.strip())[1:-1]
+            if len(cells) != len(HEADERS):
+                raise ValueError(f"{path}:{number}: expected {len(HEADERS)} columns")
+            row = [cell.strip().replace(r"\|", "|") for cell in cells]
+            if row[0] in seen:
+                raise ValueError(f"{path}:{number}: duplicate {row[0]}")
+            seen.add(row[0])
+            rows.append(row)
+    return rows
+
+
+def cmd_insert(input_path: str, outdir: str):
+    if os.path.isdir(input_path):
+        files = sorted(glob.glob(os.path.join(input_path, "*.md")))
+        if not files:
+            sys.exit(f"No Markdown tables: {input_path}")
+        tables = [(os.path.splitext(os.path.basename(path))[0], read_markdown(path))
+                  for path in files]
+    else:
+        import openpyxl
+
+        wb = openpyxl.load_workbook(input_path)
+        tables = [(ws.title, ws.iter_rows(min_row=2, values_only=True))
+                  for ws in wb.worksheets]
 
     os.makedirs(outdir, exist_ok=True)
-    wb = openpyxl.load_workbook(input_xlsx)
-
-    for ws in wb.worksheets:
+    for title, rows in tables:
         rows_out: list[str] = []
         has_translation = False
 
-        for row in ws.iter_rows(min_row=2, values_only=True):
+        for row in rows:
             if not row or row[0] is None:
                 continue
 
@@ -211,11 +236,11 @@ def cmd_insert(input_xlsx: str, outdir: str):
             rows_out.append(f"{key},{csv_val}")
 
         if not rows_out or not has_translation:
-            print(f"  Sheet '{ws.title}': no translated rows, skipped")
+            print(f"  Sheet '{title}': no translated rows, skipped")
             continue
 
         # Sanitise sheet name for use as filename
-        safe_name = re.sub(r'[\\/:*?"<>|]', "_", ws.title)
+        safe_name = re.sub(r'[\\/:*?"<>|]', "_", title)
         outpath   = os.path.join(outdir, safe_name + ".mjres")
 
         with open(outpath, "w", encoding="utf-8", newline="") as f:
@@ -243,8 +268,8 @@ def main():
     p_ext.add_argument("-o", "--output", default="output.xlsx", metavar="OUTPUT.xlsx")
 
     # insert
-    p_ins = sub.add_parser("insert", help="Convert .xlsx → .mjres")
-    p_ins.add_argument("input", metavar="INPUT.xlsx")
+    p_ins = sub.add_parser("insert", help="Convert Markdown or .xlsx → .mjres")
+    p_ins.add_argument("input", metavar="INPUT")
     p_ins.add_argument("-o", "--outdir", default=".", metavar="OUTDIR")
 
     args = parser.parse_args()

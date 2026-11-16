@@ -18,3 +18,14 @@ readme.txt
 scenario.arc.bak
 /Backup
 レコンキスタ.exe
+/graphics_patch
+/graphics_patch_encoded
+/graphics_special_translation
+/TLIMG2
+/To_Owari
+/ToMajiTools/__pycache__
+/tools/patch_menu_rs/target
+reconquista_walkthrough.md
+update.arc.pre-rc8-fix.bak
+update.arc.pre-rct-fix.bak
+レコンキスタ.1DD7529AA829281.crash.dmp

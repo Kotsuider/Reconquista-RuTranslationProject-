@@ -1,6 +1,7 @@
 import glob, sys
 
 replacements = {
+    chr(0x2665): "(сердечко)",  # ♥ is not representable in CP932
     chr(0xAB): chr(0x201C),   # « -> "
     chr(0xBB): chr(0x201D),   # » -> "
     chr(0x2014): chr(0x2015), # — (em dash) -> ― (horizontal bar)

@@ -1,3 +1,5 @@
+mod dialog;
+
 use std::collections::HashMap;
 use std::env;
 use std::fs;
@@ -20,16 +22,18 @@ extern "system" {
     fn GetLastError() -> u32;
 }
 
-const RT_MENU: usize = 4;
+const RT_MENU: u32 = 4;
+const RT_DIALOG: u32 = 5;
 
-struct PeMenu {
+struct PeResource {
+    kind: u32,
     res_id: u32,
     name: Option<String>,
     lang_id: u16,
     raw_bytes: Vec<u8>,
 }
 
-fn parse_pe_menus(exe_bytes: &[u8]) -> Result<Vec<PeMenu>, String> {
+fn parse_pe_resources(exe_bytes: &[u8]) -> Result<Vec<PeResource>, String> {
     if exe_bytes.len() < 0x40 || &exe_bytes[..2] != b"MZ" {
         return Err("Неверный формат PE (нет сигнатуры MZ)".into());
     }
@@ -112,8 +116,7 @@ fn parse_pe_menus(exe_bytes: &[u8]) -> Result<Vec<PeMenu>, String> {
     let mut pe_menus = Vec::new();
     let type_entries = get_entries(rsrc_base);
     for (tid, _, is_dir1, type_off) in type_entries {
-        if tid == 4 && is_dir1 {
-            // RT_MENU
+        if matches!(tid, RT_MENU | RT_DIALOG) && is_dir1 {
             let name_entries = get_entries(type_off);
             for (rid, rname, is_dir2, name_off) in name_entries {
                 if is_dir2 {
@@ -124,7 +127,8 @@ fn parse_pe_menus(exe_bytes: &[u8]) -> Result<Vec<PeMenu>, String> {
                             let data_sz = u32::from_le_bytes(exe_bytes[data_entry_off + 4..data_entry_off + 8].try_into().unwrap()) as usize;
                             let file_off = rsrc_sec_raw + (data_rva - rsrc_sec_va) as usize;
                             if exe_bytes.len() >= file_off + data_sz {
-                                pe_menus.push(PeMenu {
+                                pe_menus.push(PeResource {
+                                    kind: tid,
                                     res_id: rid,
                                     name: rname.clone(),
                                     lang_id: lid as u16,
@@ -219,6 +223,38 @@ fn to_wide(s: &str) -> Vec<u16> {
     s.encode_utf16().chain(std::iter::once(0)).collect()
 }
 
+fn translate_screen_dialog(data: &[u8]) -> Result<Vec<u8>, String> {
+    let dict = HashMap::from([
+        ("スクリーン詳細設定".into(), "Настройки экрана".into()),
+        ("全画面モード".into(), "Полный экран".into()),
+        ("常に手前に表示".into(), "Поверх всех окон".into()),
+        ("ｷｬﾝｾﾙ".into(), "Отмена".into()),
+        ("DirectDrawを使用".into(), "Использовать DirectDraw".into()),
+    ]);
+    dialog::translate(data, &dict)
+}
+
+fn patch_rekonquista_strings(bytes: &mut [u8]) -> usize {
+    // These ANSI strings have fixed storage in the Reconquista executable.
+    // Both source and replacement include their terminator and padding.
+    let pairs: [(&[u8], &[u8]); 2] = [
+        (b"\x8f\x49\x97\xb9\x82\xb5\x82\xc4\x82\xe6\x82\xeb\x82\xb5\x82\xa2\x82\xc5\x82\xb7\x82\xa9\x81\x48\x00\x00\x00\x00", b"\x84\x42\x84\x8d\x84\x7a\x84\x84\x84\x79\x20\x84\x79\x84\x78\x20\x84\x79\x84\x73\x84\x82\x84\x8d\x3f\x00\x00\x00"),
+        (b"\x95\x57\x8f\x80\x00\x00\x00\x00", b"\x84\x40\x84\x72\x84\x84\x2e\x00"),
+    ];
+    let mut count = 0;
+    for (original, translated) in pairs {
+        let mut matches = bytes.windows(original.len()).enumerate()
+            .filter(|(_, window)| *window == original);
+        if let Some((offset, _)) = matches.next() {
+            if matches.next().is_none() {
+                bytes[offset..offset + original.len()].copy_from_slice(translated);
+                count += 1;
+            }
+        }
+    }
+    count
+}
+
 fn patch_exe_menu(exe_path: &Path, dict: &HashMap<String, String>) -> Result<usize, String> {
     let mut exe_bytes = Vec::new();
     fs::File::open(exe_path)
@@ -226,7 +262,7 @@ fn patch_exe_menu(exe_path: &Path, dict: &HashMap<String, String>) -> Result<usi
         .read_to_end(&mut exe_bytes)
         .map_err(|e| format!("Ошибка чтения {}: {}", exe_path.display(), e))?;
 
-    let menus = parse_pe_menus(&exe_bytes)?;
+    let menus = parse_pe_resources(&exe_bytes)?;
     if menus.is_empty() {
         return Err("В файле не найдено ресурсов меню (RT_MENU)".into());
     }
@@ -252,25 +288,39 @@ fn patch_exe_menu(exe_path: &Path, dict: &HashMap<String, String>) -> Result<usi
     let mut success_all = true;
 
     for m in &menus {
-        let items = match decode_menu(&m.raw_bytes) {
-            Ok(it) => it,
-            Err(_) => continue,
-        };
-
-        let mut changed = false;
-        let mut new_items = Vec::new();
-        for mut it in items {
-            if let Some(trans) = dict.get(&it.text) {
-                it.text = trans.clone();
-                changed = true;
-                total_translated += 1;
+        let new_raw = match m.kind {
+            RT_MENU => {
+                let mut items = match decode_menu(&m.raw_bytes) {
+                    Ok(items) => items,
+                    Err(_) => continue,
+                };
+                let previous_count = total_translated;
+                for item in &mut items {
+                    if let Some(translation) = dict.get(&item.text) {
+                        item.text.clone_from(translation);
+                        total_translated += 1;
+                    }
+                }
+                if previous_count == total_translated {
+                    continue;
+                }
+                encode_menu(&items)
             }
-            new_items.push(it);
-        }
-
-        if changed {
-            let new_raw = encode_menu(&new_items);
-            let lp_type = RT_MENU as *const u16;
+            RT_DIALOG if m.name.as_deref() == Some("SCREENOPTION")
+                || m.name.as_deref() == Some("SCREENOPTION_FULL") => {
+                match translate_screen_dialog(&m.raw_bytes) {
+                    Ok(data) => data,
+                    Err(error) => {
+                        println!("Ошибка шаблона настроек экрана: {error}");
+                        success_all = false;
+                        continue;
+                    }
+                }
+            }
+            _ => continue,
+        };
+        if new_raw != m.raw_bytes {
+            let lp_type = m.kind as usize as *const u16;
             let wide_name: Option<Vec<u16>> = m.name.as_ref().map(|s| to_wide(s));
             let lp_name = match &wide_name {
                 Some(w) => w.as_ptr(),
@@ -293,7 +343,7 @@ fn patch_exe_menu(exe_path: &Path, dict: &HashMap<String, String>) -> Result<usi
                 success_all = false;
             } else {
                 let name_str = m.name.clone().unwrap_or_else(|| m.res_id.to_string());
-                println!("Пропатчено меню: {} (Lang: 0x{:X})", name_str, m.lang_id);
+                println!("Обновлён ресурс: {} (Lang: 0x{:X})", name_str, m.lang_id);
             }
         }
     }
@@ -304,6 +354,17 @@ fn patch_exe_menu(exe_path: &Path, dict: &HashMap<String, String>) -> Result<usi
         return Err(format!("EndUpdateResourceW завершился с ошибкой: {}", err));
     }
 
+    if !success_all {
+        return Err("Изменения ресурсов отменены".into());
+    }
+    if exe_path.file_name().and_then(|name| name.to_str()) == Some("レコンキスタ.exe") {
+        let mut updated = fs::read(exe_path).map_err(|error| error.to_string())?;
+        let count = patch_rekonquista_strings(&mut updated);
+        if count != 0 {
+            fs::write(exe_path, updated).map_err(|error| error.to_string())?;
+        }
+        println!("Обновлено строк CP932: {count}");
+    }
     Ok(total_translated)
 }
 

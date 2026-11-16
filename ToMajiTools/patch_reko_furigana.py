@@ -18,6 +18,7 @@ patch_reko_furigana.py — Отключение вывода японской ф
 import os
 import sys
 import glob
+import json
 import re
 
 def patch_yazlib(filepath: str) -> bool:
@@ -132,11 +133,70 @@ def patch_inline_rubies(scenario_dir: str) -> int:
     return total_rubies
 
 
+def patch_prologue_insertions(scenario_dir: str) -> None:
+    path = os.path.join(scenario_dir, "00_レコンキスタ_start_2.mjil")
+    if not os.path.isfile(path):
+        return
+    with open(path, encoding="utf-8") as source:
+        content = source.read()
+    # L2041 and L2042 already translate the verb. Keep a word separator.
+    content = re.sub(
+        r'  ldstr +"殺そう"\n(?=  callp +\$2f93f26a \(1\)\n  text +%\{L2042\})',
+        '  ldstr         " "\n',
+        content,
+    )
+    # The ordinal now appears in L2061 itself.
+    content = re.sub(
+        r'  ldstr +"みたび"\n  ldstr +"三度"\n  callp +\$3198fd01 \(2\)\n'
+        r'(?=  text +%\{L2061\})',
+        '',
+        content,
+    )
+    with open(path, "w", encoding="utf-8", newline="\n") as target:
+        target.write(content)
+
+
+def apply_insertion_overrides(scenario_dir: str) -> None:
+    manifest = os.path.join(os.path.dirname(__file__), "japanese_insertion_overrides.json")
+    with open(manifest, encoding="utf-8") as source:
+        scripts = json.load(source)
+
+    count = 0
+    for name, rules in scripts.items():
+        path = os.path.join(scenario_dir, name + ".mjil")
+        with open(path, encoding="utf-8") as source:
+            content = source.read()
+        edits = {}
+        for rule in rules:
+            block = rule["block"]
+            matches = list(re.finditer(r"^" + re.escape(block) + r"$", content, re.MULTILINE))
+            occurrence = rule["occurrence"]
+            if occurrence >= len(matches):
+                raise ValueError(f"{name}: reviewed insertion missing: {block!r}, occurrence {occurrence}")
+            start, end = matches[occurrence].span()
+            if (start, end) in edits:
+                raise ValueError(f"{name}: duplicate insertion override: {block!r}")
+            # The full stack operation is removed. Preserve a separator only
+            # when adjacent translated fragments would otherwise run together.
+            edits[start, end] = '  ldstr         " "\n  ctrl          "d"\n  proc' if rule["separator"] else ""
+        for (start, end), replacement in sorted(edits.items(), reverse=True):
+            if replacement:
+                content = content[:start] + replacement + content[end:]
+            else:
+                content = content[:start] + content[end + 1:]
+        with open(path, "w", encoding="utf-8", newline="\n") as target:
+            target.write(content)
+        count += len(edits)
+    print(f"[OK] Applied {count} reviewed Japanese insertion overrides.")
+
+
 def main():
     scenario_dir = sys.argv[1] if len(sys.argv) > 1 else "scenario"
     yazlib_path = os.path.join(scenario_dir, "yazlib.mjil")
     patch_yazlib(yazlib_path)
     patch_inline_rubies(scenario_dir)
+    patch_prologue_insertions(scenario_dir)
+    apply_insertion_overrides(scenario_dir)
 
 if __name__ == "__main__":
     main()

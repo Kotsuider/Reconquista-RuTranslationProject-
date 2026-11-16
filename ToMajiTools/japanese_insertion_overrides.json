@@ -1,0 +1,1539 @@
+{
+  "00_レコンキスタ_start": [
+    {
+      "block": "  ldstr         \"それ\"\n  callp         $2f93f26a (1)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"もみじ\"\n  ldstr         \"紅葉\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": false
+    },
+    {
+      "block": "  ldstr         \"まぶた\"\n  ldstr         \"瞼\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"とう\"\n  ldstr         \"義父\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": false
+    }
+  ],
+  "00_レコンキスタ_start_2": [
+    {
+      "block": "  ldstr         \"それ\"\n  ldstr         \"三沢信哉\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"いざな\"\n  ldstr         \"誘\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": false
+    },
+    {
+      "block": "  ldstr         \"よそさま\"\n  ldstr         \"他所様\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"この島\"\n  callp         $2f93f26a (1)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"チャンピオン\"\n  ldstr         \"麻咲\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"コーナー\"\n  ldstr         \"席\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"まほ\"\n  callp         $2f93f26a (1)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"アレ\"\n  callp         $2f93f26a (1)",
+      "occurrence": 0,
+      "separator": true
+    }
+  ],
+  "00_レコンキスタ_start_3": [
+    {
+      "block": "  ldstr         \"とこ\"\n  ldstr         \"クラス\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"あがな\"\n  ldstr         \"贖\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": false
+    },
+    {
+      "block": "  ldstr         \"ぎん\"\n  ldstr         \"吟\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": false
+    },
+    {
+      "block": "  ldstr         \"あがな\"\n  ldstr         \"贖\"\n  callp         $3198fd01 (2)",
+      "occurrence": 1,
+      "separator": true
+    }
+  ],
+  "kureha_05": [
+    {
+      "block": "  ldstr         \"あの\"\n  callp         $2f93f26a (1)",
+      "occurrence": 0,
+      "separator": false
+    },
+    {
+      "block": "  ldstr         \"痕跡\"\n  callp         $2f93f26a (1)",
+      "occurrence": 0,
+      "separator": true
+    }
+  ],
+  "kureha_06": [
+    {
+      "block": "  ldstr         \"あがな\"\n  ldstr         \"贖\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"自分のことは棚に上げ\"\n  callp         $2f93f26a (1)",
+      "occurrence": 0,
+      "separator": false
+    },
+    {
+      "block": "  ldstr         \"おうま\"\n  ldstr         \"逢魔\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    }
+  ],
+  "kureha_08": [
+    {
+      "block": "  ldstr         \"それ\"\n  callp         $2f93f26a (1)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"しの\"\n  ldstr         \"偲\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"ちな\"\n  ldstr         \"因\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    }
+  ],
+  "kureha_09": [
+    {
+      "block": "  ldstr         \"あの名前\"\n  callp         $2f93f26a (1)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"しゅんじゅん\"\n  ldstr         \"逡巡\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"かえ\"\n  ldstr         \"反\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"はがん\"\n  ldstr         \"破顔\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": false
+    },
+    {
+      "block": "  ldstr         \"風が\"\n  callp         $2f93f26a (1)",
+      "occurrence": 0,
+      "separator": false
+    },
+    {
+      "block": "  ldstr         \"下から\"\n  callp         $2f93f26a (1)",
+      "occurrence": 0,
+      "separator": false
+    }
+  ],
+  "kureha_10": [
+    {
+      "block": "  ldstr         \"つむ\"\n  callp         $2f93f26a (1)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"暮葉の姿をした誰か\"\n  callp         $2f93f26a (1)",
+      "occurrence": 0,
+      "separator": true
+    }
+  ],
+  "kureha_11": [
+    {
+      "block": "  ldstr         \"先生\"\n  callp         $2f93f26a (1)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"きんこう\"\n  ldstr         \"均衡\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"あざ\"\n  ldstr         \"痣\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"ひへい\"\n  ldstr         \"疲弊\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    }
+  ],
+  "kureha_12": [
+    {
+      "block": "  ldstr         \"どうきん\"\n  ldstr         \"同衾\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"彼女\"\n  callp         $2f93f26a (1)",
+      "occurrence": 0,
+      "separator": true
+    }
+  ],
+  "kureha_14": [
+    {
+      "block": "  ldstr         \"淡々と\"\n  callp         $2f93f26a (1)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"解体作業\"\n  callp         $2f93f26a (1)",
+      "occurrence": 0,
+      "separator": true
+    }
+  ],
+  "kureha_16": [
+    {
+      "block": "  ldstr         \"それ\"\n  callp         $2f93f26a (1)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"それ\"\n  callp         $2f93f26a (1)",
+      "occurrence": 1,
+      "separator": false
+    }
+  ],
+  "kureha_17": [
+    {
+      "block": "  ldstr         \"うかが\"\n  ldstr         \"伺\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    }
+  ],
+  "kureha_18": [
+    {
+      "block": "  ldstr         \"これ\"\n  callp         $2f93f26a (1)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"これ\"\n  callp         $2f93f26a (1)",
+      "occurrence": 1,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"これ\"\n  callp         $2f93f26a (1)",
+      "occurrence": 2,
+      "separator": false
+    },
+    {
+      "block": "  ldstr         \"かみじょう\"\n  ldstr         \"上条\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"あの音\"\n  callp         $2f93f26a (1)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"暮葉の姿をした\"\n  callp         $2f93f26a (1)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"せいひつ\"\n  ldstr         \"静謐\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    }
+  ],
+  "kureha_ep": [
+    {
+      "block": "  ldstr         \"つむ\"\n  callp         $2f93f26a (1)",
+      "occurrence": 0,
+      "separator": true
+    }
+  ],
+  "last_gendai05": [
+    {
+      "block": "  ldstr         \"かえ\"\n  ldstr         \"反\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"まだ\"\n  callp         $2f93f26a (1)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"ことほ\"\n  ldstr         \"言祝\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    }
+  ],
+  "last_gendai08": [
+    {
+      "block": "  ldstr         \"とうさま\"\n  ldstr         \"義父様\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    }
+  ],
+  "last_gendai11": [
+    {
+      "block": "  ldstr         \"僕\"\n  callp         $2f93f26a (1)",
+      "occurrence": 0,
+      "separator": true
+    }
+  ],
+  "last_gendai13": [
+    {
+      "block": "  ldstr         \"ここ\"\n  callp         $2f93f26a (1)",
+      "occurrence": 0,
+      "separator": true
+    }
+  ],
+  "last_gendai14": [
+    {
+      "block": "  ldstr         \"あの\"\n  callp         $2f93f26a (1)",
+      "occurrence": 0,
+      "separator": true
+    }
+  ],
+  "last_gendai15": [
+    {
+      "block": "  ldstr         \"この手\"\n  callp         $2f93f26a (1)",
+      "occurrence": 0,
+      "separator": true
+    }
+  ],
+  "last_gendai16": [
+    {
+      "block": "  ldstr         \"いちる\"\n  ldstr         \"一縷\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"僕\"\n  callp         $2f93f26a (1)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"ゲーム\"\n  ldstr         \"戦闘\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    }
+  ],
+  "last_kako03": [
+    {
+      "block": "  ldstr         \"たま\"\n  ldstr         \"給\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    }
+  ],
+  "last_kako04": [
+    {
+      "block": "  ldstr         \"ゆえ\"\n  ldstr         \"悠絵\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": false
+    }
+  ],
+  "last_kako06": [
+    {
+      "block": "  ldstr         \"かえ\"\n  ldstr         \"反\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"ちかぞう\"\n  ldstr         \"地下蔵\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    }
+  ],
+  "last_kako07": [
+    {
+      "block": "  ldstr         \"すべ\"\n  ldstr         \"術\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    }
+  ],
+  "maho_04": [
+    {
+      "block": "  ldstr         \"ちしぶき\"\n  ldstr         \"血飛沫\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"と\"\n  ldstr         \"飛\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"ずさ\"\n  ldstr         \"退\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"かたわ\"\n  ldstr         \"傍\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"ひとはらん\"\n  ldstr         \"一波乱\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"かし\"\n  ldstr         \"傾\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"いんぺい\"\n  ldstr         \"隠蔽\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"さん\"\n  ldstr         \"桟\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": false
+    },
+    {
+      "block": "  ldstr         \"こぼ\"\n  ldstr         \"零\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    }
+  ],
+  "maho_05": [
+    {
+      "block": "  ldstr         \"よし\"\n  ldstr         \"由\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"ひと\"\n  ldstr         \"独\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"ごと\"\n  ldstr         \"言\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"さび\"\n  ldstr         \"寂\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"くぐ\"\n  ldstr         \"潜\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"ほご\"\n  ldstr         \"反故\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"そと\"\n  ldstr         \"本土\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": false
+    },
+    {
+      "block": "  ldstr         \"ゆうべ\"\n  ldstr         \"昨夜\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"きゅうきょ\"\n  ldstr         \"急遽\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    }
+  ],
+  "maho_06": [
+    {
+      "block": "  ldstr         \"あがな\"\n  ldstr         \"贖\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"むすめ\"\n  ldstr         \"真帆子\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"・・\"\n  ldstr         \"それ\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"たこ\"\n  ldstr         \"凧\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"たこあ\"\n  ldstr         \"凧揚\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"ふさが\"\n  ldstr         \"塞\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"ひとけ\"\n  ldstr         \"人気\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": false
+    },
+    {
+      "block": "  ldstr         \"夜中\"\n  ldstr         \"こんな時間\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": false
+    },
+    {
+      "block": "  ldstr         \"うかが\"\n  ldstr         \"窺\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"こわば\"\n  ldstr         \"強張\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"まもう\"\n  ldstr         \"磨耗\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"かわ\"\n  ldstr         \"躱\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    }
+  ],
+  "maho_07": [
+    {
+      "block": "  ldstr         \"うつ\"\n  ldstr         \"感染\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"こんりんざい\"\n  ldstr         \"金輪際\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"たこあ\"\n  ldstr         \"凧揚\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"いく\"\n  ldstr         \"幾\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"・・・・・\"\n  ldstr         \"今度は腹部\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    }
+  ],
+  "maho_08": [
+    {
+      "block": "  ldstr         \"そご\"\n  ldstr         \"齟齬\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"いびつ\"\n  ldstr         \"歪\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    }
+  ],
+  "maho_09": [
+    {
+      "block": "  ldstr         \"うんぬん\"\n  ldstr         \"云々\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"のれん\"\n  ldstr         \"暖簾\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"よど\"\n  ldstr         \"澱\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"つ\"\n  ldstr         \"攣\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    }
+  ],
+  "maho_10": [
+    {
+      "block": "  ldstr         \"ふところ\"\n  ldstr         \"懐\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"むすめ\"\n  ldstr         \"真帆子\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"起きる\"\n  ldstr         \"限界\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    }
+  ],
+  "maho_13": [
+    {
+      "block": "  ldstr         \"すべ\"\n  ldstr         \"術\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"せき\"\n  ldstr         \"咳\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    }
+  ],
+  "maho_14": [
+    {
+      "block": "  ldstr         \"とど\"\n  ldstr         \"止\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    }
+  ],
+  "maho_15": [
+    {
+      "block": "  ldstr         \"うずくま\"\n  ldstr         \"蹲\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"・・\"\n  ldstr         \"それ\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    }
+  ],
+  "maho_17": [
+    {
+      "block": "  ldstr         \"かわ\"\n  ldstr         \"躱\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"しょうすい\"\n  ldstr         \"憔悴\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"ほとばし\"\n  ldstr         \"迸\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"あぎと\"\n  ldstr         \"顎\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": false
+    },
+    {
+      "block": "  ldstr         \"じゅうりん\"\n  ldstr         \"蹂躙\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": false
+    }
+  ],
+  "maho_18_2ero": [
+    {
+      "block": "  ldstr         \"こ\"\n  ldstr         \"捏\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    }
+  ],
+  "maho_19": [
+    {
+      "block": "  ldstr         \"ちょうつがい\"\n  ldstr         \"蝶番\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": false
+    },
+    {
+      "block": "  ldstr         \"あつら\"\n  ldstr         \"誂\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"とっさ\"\n  ldstr         \"咄嗟\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": false
+    },
+    {
+      "block": "  ldstr         \"は\"\n  ldstr         \"撥\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"ごぶ\"\n  ldstr         \"五分\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"しゅんじゅん\"\n  ldstr         \"逡巡\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"・・・・・・\"\n  ldstr         \"全部揃ってる\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"たが\"\n  ldstr         \"違\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"・・\"\n  ldstr         \"また\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"・・・・・・・・\"\n  ldstr         \"羽鳥真帆子が死に\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"・・・・・・・\"\n  ldstr         \"私の妹が宿った\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": false
+    },
+    {
+      "block": "  ldstr         \"それ\"\n  ldstr         \"液体\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    }
+  ],
+  "makino_kyoutu": [
+    {
+      "block": "  ldstr         \"ほうふつ\"\n  ldstr         \"髣髴\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"らんかん\"\n  ldstr         \"欄干\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"クロス\"\n  ldstr         \"十字架\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"クロス\"\n  ldstr         \"十字架\"\n  callp         $3198fd01 (2)",
+      "occurrence": 1,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"クロス\"\n  ldstr         \"十字架\"\n  callp         $3198fd01 (2)",
+      "occurrence": 2,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"にわ\"\n  ldstr         \"俄\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    }
+  ],
+  "masa_08": [
+    {
+      "block": "  ldstr         \"やしまみどり\"\n  ldstr         \"矢嶋碧\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"いとま\"\n  ldstr         \"暇\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"たち\"\n  callp         $2f93f26a (1)",
+      "occurrence": 0,
+      "separator": true
+    }
+  ],
+  "masa_11": [
+    {
+      "block": "  ldstr         \"動いてる\"\n  callp         $2f93f26a (1)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"こっきしん\"\n  ldstr         \"克己心\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    }
+  ],
+  "masa_12": [
+    {
+      "block": "  ldstr         \"かしま\"\n  ldstr         \"姦\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    }
+  ],
+  "masa_16": [
+    {
+      "block": "  ldstr         \"間違い\"\n  callp         $2f93f26a (1)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"黒い自動車\"\n  callp         $2f93f26a (1)",
+      "occurrence": 0,
+      "separator": true
+    }
+  ],
+  "masa_17": [
+    {
+      "block": "  ldstr         \"あれ\"\n  callp         $2f93f26a (1)",
+      "occurrence": 0,
+      "separator": false
+    }
+  ],
+  "masa_18": [
+    {
+      "block": "  ldstr         \"アレ\"\n  callp         $2f93f26a (1)",
+      "occurrence": 0,
+      "separator": false
+    },
+    {
+      "block": "  ldstr         \"かえ\"\n  ldstr         \"反\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    }
+  ],
+  "shinya_kyoutu": [
+    {
+      "block": "  ldstr         \"こら\"\n  ldstr         \"堪\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"ひたい\"\n  ldstr         \"額\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"・・\"\n  ldstr         \"あれ\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"首刈り女\"\n  ldstr         \"殺人犯\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"きぬ\"\n  ldstr         \"衣\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"じゅうにひとえ\"\n  ldstr         \"十二単\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"おれ\"\n  ldstr         \"敵\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"せいひつ\"\n  ldstr         \"静謐\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": false
+    },
+    {
+      "block": "  ldstr         \"おれ\"\n  ldstr         \"学生\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"おびただ\"\n  ldstr         \"夥\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"てつ\"\n  ldstr         \"轍\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": false
+    }
+  ],
+  "sina_04": [
+    {
+      "block": "  ldstr         \"トレーサー\"\n  ldstr         \"追跡機\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": false
+    },
+    {
+      "block": "  ldstr         \"とこ\"\n  ldstr         \"場所\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"うんぬん\"\n  ldstr         \"云々\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"かけら\"\n  ldstr         \"欠片\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"ちしぶき\"\n  ldstr         \"血飛沫\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    }
+  ],
+  "sina_05": [
+    {
+      "block": "  ldstr         \"ひと\"\n  ldstr         \"女性\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": false
+    },
+    {
+      "block": "  ldstr         \"・・・\"\n  ldstr         \"ヤジマ\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"・・・\"\n  ldstr         \"ヤシマ\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"みさわ\"\n  ldstr         \"三沢\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"しんや\"\n  ldstr         \"信哉\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"うかが\"\n  ldstr         \"窺\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"ひとがた\"\n  ldstr         \"人形\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": false
+    },
+    {
+      "block": "  ldstr         \"ペキ\"\n  ldstr         \"碧\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": false
+    },
+    {
+      "block": "  ldstr         \"さんたく\"\n  ldstr         \"三沢\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"のぶなり\"\n  ldstr         \"信哉\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"リアル\"\n  ldstr         \"現実\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": false
+    },
+    {
+      "block": "  ldstr         \"おぼろ\"\n  ldstr         \"朧\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": false
+    }
+  ],
+  "sina_06": [
+    {
+      "block": "  ldstr         \"あがな\"\n  ldstr         \"贖\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"そんたく\"\n  ldstr         \"忖度\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"わず\"\n  ldstr         \"僅\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": false
+    }
+  ],
+  "sina_07": [
+    {
+      "block": "  ldstr         \"こいつ\"\n  ldstr         \"詩菜\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"矢嶋さん\"\n  ldstr         \"本人\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"ずさん\"\n  ldstr         \"杜撰\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"こいつ\"\n  ldstr         \"手錠\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"うつろ\"\n  ldstr         \"虚\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"うつろ\"\n  ldstr         \"虚\"\n  callp         $3198fd01 (2)",
+      "occurrence": 1,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"うつつ\"\n  ldstr         \"現\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"ことわり\"\n  ldstr         \"理\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"ゆえ\"\n  ldstr         \"故\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"マジ\"\n  ldstr         \"真剣\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"ここ\"\n  ldstr         \"島\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"バック\"\n  ldstr         \"背景\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": false
+    }
+  ],
+  "sina_08": [
+    {
+      "block": "  ldstr         \"こんなもの\"\n  ldstr         \"注射器\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"かけら\"\n  ldstr         \"断片\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": false
+    },
+    {
+      "block": "  ldstr         \"ヒートデス\"\n  ldstr         \"熱死\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"かれ\"\n  ldstr         \"三沢君\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    }
+  ],
+  "sina_10": [
+    {
+      "block": "  ldstr         \"ゆえ\"\n  ldstr         \"彼女\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    }
+  ],
+  "sina_12": [
+    {
+      "block": "  ldstr         \"あまね\"\n  ldstr         \"遍\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"ここ\"\n  ldstr         \"繁華街\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    }
+  ],
+  "sina_13": [
+    {
+      "block": "  ldstr         \"とが\"\n  ldstr         \"咎\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"よりしろ\"\n  ldstr         \"依代\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"とうとう\"\n  ldstr         \"滔々\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"やしま\"\n  ldstr         \"矢嶋\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": false
+    },
+    {
+      "block": "  ldstr         \"ぺき\"\n  ldstr         \"碧\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": false
+    }
+  ],
+  "sina_16": [
+    {
+      "block": "  ldstr         \"おまえ\"\n  ldstr         \"詩菜\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": false
+    }
+  ],
+  "sina_17": [
+    {
+      "block": "  ldstr         \"ひと\"\n  ldstr         \"他人\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"ことほ\"\n  ldstr         \"言祝\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"ここ\"\n  ldstr         \"病院\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"ボトル\"\n  ldstr         \"これ\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"・・\"\n  ldstr         \"もの\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    }
+  ],
+  "sina_18_3": [
+    {
+      "block": "  ldstr         \"おまえ\"\n  ldstr         \"詩菜\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"たかみ\"\n  ldstr         \"高処\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"ありか\"\n  ldstr         \"在処\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"よりしろ\"\n  ldstr         \"依代\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"ゆえ\"\n  ldstr         \"お前\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    }
+  ],
+  "sina_19": [
+    {
+      "block": "  ldstr         \"わたし\"\n  ldstr         \"自分\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"にえ\"\n  ldstr         \"贄\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"ここ\"\n  ldstr         \"病院\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    }
+  ],
+  "sina_sub1": [
+    {
+      "block": "  ldstr         \"せんせい\"\n  ldstr         \"医者\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"せんせい\"\n  ldstr         \"医師\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    }
+  ],
+  "sina_sub2": [
+    {
+      "block": "  ldstr         \"ここ\"\n  ldstr         \"病院\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"せんせい\"\n  ldstr         \"医師\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    }
+  ],
+  "sina_sub3": [
+    {
+      "block": "  ldstr         \"かのじょ\"\n  ldstr         \"女生徒\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"よろこ\"\n  ldstr         \"悦\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"ここ\"\n  ldstr         \"学校\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"しにん\"\n  ldstr         \"女子生徒\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    }
+  ],
+  "sub_last": [
+    {
+      "block": "  ldstr         \"あれ\"\n  callp         $2f93f26a (1)",
+      "occurrence": 0,
+      "separator": false
+    },
+    {
+      "block": "  ldstr         \"それ\"\n  callp         $2f93f26a (1)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"それ\"\n  callp         $2f93f26a (1)",
+      "occurrence": 1,
+      "separator": false
+    },
+    {
+      "block": "  ldstr         \"僕\"\n  callp         $2f93f26a (1)",
+      "occurrence": 0,
+      "separator": false
+    },
+    {
+      "block": "  ldstr         \"かお\"\n  ldstr         \"香\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"僕\"\n  callp         $2f93f26a (1)",
+      "occurrence": 1,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"あるもの\"\n  callp         $2f93f26a (1)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"キオク\"\n  ldstr         \"魂\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"くら\"\n  ldstr         \"昏\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    }
+  ],
+  "sub_last05": [
+    {
+      "block": "  ldstr         \"それ\"\n  callp         $2f93f26a (1)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"それ\"\n  callp         $2f93f26a (1)",
+      "occurrence": 1,
+      "separator": false
+    }
+  ],
+  "sub_last06": [
+    {
+      "block": "  ldstr         \"僕\"\n  callp         $2f93f26a (1)",
+      "occurrence": 0,
+      "separator": false
+    },
+    {
+      "block": "  ldstr         \"かお\"\n  ldstr         \"香\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"キオク\"\n  ldstr         \"魂\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"くら\"\n  ldstr         \"昏\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    }
+  ],
+  "sub_last08": [
+    {
+      "block": "  ldstr         \"僕\"\n  callp         $2f93f26a (1)",
+      "occurrence": 0,
+      "separator": true
+    }
+  ],
+  "sub_masa01": [
+    {
+      "block": "  ldstr         \"あれ\"\n  callp         $2f93f26a (1)",
+      "occurrence": 0,
+      "separator": false
+    }
+  ],
+  "サブイベント": [
+    {
+      "block": "  ldstr         \"あの名前\"\n  callp         $2f93f26a (1)",
+      "occurrence": 0,
+      "separator": true
+    }
+  ],
+  "kureha_19": [
+    {
+      "block": "  ldstr         \"ひとりでなんて\"\n  callp         $2f93f26a (1)",
+      "occurrence": 0,
+      "separator": true
+    }
+  ],
+  "last_ep": [
+    {
+      "block": "  ldstr         \"ここ\"\n  ldstr         \"４階\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    }
+  ],
+  "kosihata": [
+    {
+      "block": "  ldstr         \"しが　　　らみ\"\n  ldstr         \"柵\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"しがらみ\"\n  ldstr         \"柵\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"逃げろ\"\n  callp         $2f93f26a (1)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"ニゲロ\"\n  ldstr         \"逃げろ\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"ニゲロ\"\n  ldstr         \"逃げろ\"\n  callp         $3198fd01 (2)",
+      "occurrence": 1,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"ニゲロ\"\n  ldstr         \"逃げろ\"\n  callp         $3198fd01 (2)",
+      "occurrence": 2,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"げろげろげろげろ\"\n  ldstr         \"逃げろ\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    }
+  ],
+  "kureha_15": [
+    {
+      "block": "  ldstr         \"自分の右手が喉を締め付けていたから\"\n  callp         $2f93f26a (1)",
+      "occurrence": 0,
+      "separator": true
+    }
+  ],
+  "last_gendai03": [
+    {
+      "block": "  ldstr         \"実用されている\"\n  callp         $2f93f26a (1)",
+      "occurrence": 0,
+      "separator": true
+    }
+  ],
+  "last_kako05": [
+    {
+      "block": "  ldstr         \"もみじ\"\n  ldstr         \"紅葉\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": false
+    }
+  ],
+  "maho_12": [
+    {
+      "block": "  ldstr         \"やじまみどり\"\n  ldstr         \"矢嶋碧\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    }
+  ],
+  "maho_18_3": [
+    {
+      "block": "  ldstr         \"・・・・・・・\"\n  ldstr         \"俺を突き飛ばした\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    }
+  ],
+  "masa_07": [
+    {
+      "block": "  ldstr         \"昔から\"\n  callp         $2f93f26a (1)",
+      "occurrence": 0,
+      "separator": true
+    }
+  ],
+  "masa_13": [
+    {
+      "block": "  ldstr         \"本物の\"\n  callp         $2f93f26a (1)",
+      "occurrence": 0,
+      "separator": true
+    }
+  ],
+  "sina_11": [
+    {
+      "block": "  ldstr         \"わびさび\"\n  ldstr         \"侘寂\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"ゆる\"\n  ldstr         \"弛\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    }
+  ],
+  "sina_14": [
+    {
+      "block": "  ldstr         \"こころ\"\n  ldstr         \"精神\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    }
+  ],
+  "sina_15": [
+    {
+      "block": "  ldstr         \"おんなのこ\"\n  ldstr         \"詩菜\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"かりそ\"\n  ldstr         \"仮初\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    },
+    {
+      "block": "  ldstr         \"たなごころ\"\n  ldstr         \"掌\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    }
+  ],
+  "st_anko": [
+    {
+      "block": "  ldstr         \"ぐち\"\n  ldstr         \"口\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    }
+  ],
+  "st_yana": [
+    {
+      "block": "  ldstr         \"らたい\"\n  callp         $2f93f26a (1)",
+      "occurrence": 0,
+      "separator": true
+    }
+  ],
+  "sub_last03": [
+    {
+      "block": "  ldstr         \"あるもの\"\n  callp         $2f93f26a (1)",
+      "occurrence": 0,
+      "separator": true
+    }
+  ],
+  "テスト用": [
+    {
+      "block": "  ldstr         \"もみじ\"\n  ldstr         \"紅葉\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": false
+    }
+  ],
+  "sina_09": [
+    {
+      "block": "  ldstr         \"もの\"\n  ldstr         \"存在\"\n  callp         $3198fd01 (2)",
+      "occurrence": 0,
+      "separator": true
+    }
+  ]
+}
