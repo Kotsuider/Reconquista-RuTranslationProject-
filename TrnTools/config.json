@@ -12,8 +12,8 @@
   "fixes": [
     {
       "id": "install_font_cyrillic",
-      "file": "NotoSansMonoCJKjp-VF.ttf",
-      "name": "Noto Sans Mono CJK JP",
+      "file": "NotoSerifJP-VariableFont_wght.ttf",
+      "name": "Noto Serif CJK JP",
       "state": "true"
     }
   ],
