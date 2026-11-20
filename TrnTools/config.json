@@ -1,0 +1,32 @@
+{
+  "version": "1.0.0",
+  "game_title": "Реконкиста",
+  "check_process": "レコンキスタ.exe",
+  "manifest_url": "https://raw.githubusercontent.com/Kotsuider/Reconquista-RuTranslationProject-/main/TrnTools/manifest.json",
+  "files_base_url": "https://raw.githubusercontent.com/Kotsuider/Reconquista-RuTranslationProject-/main",
+  "updater": [
+    {
+      "state": "true"
+    }
+  ],
+  "fixes": [
+    {
+      "id": "install_font_cyrillic",
+      "file": "NotoSansMonoCJKjp-VF.ttf",
+      "name": "Noto Sans Mono CJK JP",
+      "state": "true"
+    }
+  ],
+  "glagolic": [
+    {
+      "id": "change_font",
+      "file": "",
+      "name": "Глаголица",
+      "state": "false"
+    }
+  ],
+  "backup": {
+    "enabled": true,
+    "backup_dir": "Backups"
+  }
+}
