@@ -1,12 +1,12 @@
 {
   "manifest_version": 1,
-  "generated_at": "2026-11-20T21:36:21.8883605Z",
-  "version": "1.0.0",
+  "generated_at": "2026-11-21T01:41:47.6687864Z",
+  "version": "1.0.1",
   "files": [
     {
       "path": "scenario.arc",
-      "sha256": "2e5a4df55637dfd507a1ce5c75dd01a7cea74052f57ade3cc1abe588d7a441c7",
-      "size": 8342174
+      "sha256": "4b7c7e173cd6689cb8c3f5f04df0e7f5e51dee6b73532045ea1a2da684004495",
+      "size": 8341394
     },
     {
       "path": "update.arc",
